@@ -1,0 +1,14 @@
+<div class="row">
+  <label style="font-size: 20px;float: left;"><b>Find a:</b></label>
+  <div class="col s4">
+  <select style="display:block;" (input)="oc=$event.target.value"  #selection>
+      <option *ngFor="let occ of  globals.occupations" [value]="occ">{{occ}}</option>
+    </select>
+    </div>
+</div>
+  <br>
+  <button type="submit" class="btn waves-effect waves-light" on-click="selectedItem(selection)">Submit
+  </button>
+  {{select}}
+  
+  

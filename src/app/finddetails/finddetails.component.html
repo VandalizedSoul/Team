@@ -1,0 +1,24 @@
+<p>
+  Required :: {{selected}}
+  <br/>
+  Candidates: 
+</p>
+
+<table class="centered" style="width:70% " >
+    <thead >
+      <tr>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Username</th>
+      </tr>
+    </thead>
+    
+    <tbody *ngFor="let can of cand">
+      <tr> 
+        <td>{{can.name}}</td>
+        <td>{{can.occupation}}</td>
+        <td>{{can.username}}</td>
+      </tr>
+     
+    </tbody>
+  </table>

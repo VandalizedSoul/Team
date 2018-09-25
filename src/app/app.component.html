@@ -1,0 +1,72 @@
+<div class="header">
+  <h2>EXPLORE PERFECT MATCH</h2>
+
+</div>
+
+<div id="topnav" >
+ 
+<a href="#">HOME</a>
+  <a routerLink="/find">FIND</a>
+  <a href="#">NOTIFICATION<span class="new badge">4</span></a>
+
+  
+ <a href="#" style="float:right">HELP</a>
+ <a routerLink="/signin" style="float:right">SIGN IN</a>
+ <script>
+    window.onscroll = function() {myFunction()};
+ 
+ var topnav = document.getElementById("topnav");
+ var sticky = topnav.offsetTop;
+ 
+ function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    topnav.classList.add("sticky");
+  } else {
+    topnav.classList.remove("sticky");
+  }
+ }
+ console.log('hihiijhhij');
+ </script>
+</div>
+
+
+
+
+    <router-outlet></router-outlet>
+  
+  
+
+
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l3 s6">
+          <h5 class="white-text">Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project. </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Instagram</h5>
+          
+            <a class="white-text" href="https://www.instagram.com/ravi_vaghasia/?hl=en">ravi_vaghasia</a>
+            <a class="white-text" href="https://www.instagram.com/pcthakarar/?hl=en">pcthakarar</a>
+            <p>ravi99vaghasiya@gmail.com</p>
+         
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Facebook</h5>
+          
+          <a class="white-text" href="#!">Ravi Vaghasiya</a>
+           <a class="white-text" href="#!">Parth Thakarar</a>
+           <p>pcthakarar107@gmail.com</p>
+
+          
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+  

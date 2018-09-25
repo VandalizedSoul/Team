@@ -1,0 +1,131 @@
+<div class="content">
+  <div align="center">
+      <div [hidden]="submitted">
+   
+        <div class="row">
+            <div class="col s2">
+               <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+      
+      
+<form class="col s12" (ngSubmit)="onSubmit()" #userForm="ngForm">
+<div class="row">
+<div class="input-field col s6">
+<i class="material-icons prefix">account_circle</i>
+<input id="name" (input)="nm=$event.target.value" type="text" class="validate"  required title="Please Enter Name">
+<label for="name" >Name*</label>
+</div>
+<div class="input-field col s6">
+<i class="material-icons prefix">phone</i>
+<input id="phone" (input)="ph=$event.target.value" type="tel" class="validate" required pattern="^[2-9]\d{9}$" title="Please enter Phone no:" >
+<label for="phone">Telephone*</label>
+</div>
+
+</div>
+<div class="row">
+<div class="input-field col s6">
+<i class="material-icons prefix">account_circle</i>
+<input (input)="date1=$event.target.value" id="bdate" type="date" required title="Please enter the date" >
+<label for="bdate">Birthdate*</label>
+</div>
+<div class=" col s6">
+  <i class="material-icons prefix"></i>
+<label for="gender" style="padding-top: 30px;font-size: 20px;float: left;">Gender</label>
+<br><br>
+<label style="padding-top: 30px;font-size: 20px;float: left;">
+  <input name="group1" (input)="gend=$event.target.value" type="radio" value="male" checked class="validate" />
+  <span>Male</span>
+</label>
+<label style="padding-top: 30px;font-size: 20px;float: left;">
+  <input name="group1" (input)="gend=$event.target.value" type="radio" value="female" class="validate" />
+  <span>Female</span>
+</label>
+</div>
+</div>
+
+<div class="row">
+<div class="input-field col s12">
+<div class="col s4" style="font-size: 16px"><label style="font-size: 20px;float: left;"><b>Occupation*</b></label>
+</div>
+<br>
+<br>
+<div class="col s8" >
+  <select style="display:block;" (input)="oc=$event.target.value" required>
+    <option *ngFor="let occ of  globals.occupations" [value]="occ">{{occ}}</option>
+  </select>
+</div>
+</div>
+<div class="input-field col s6">
+<i class="material-icons prefix">explicit</i>
+<input id="email" (input)="em=$event.target.value" type="text" class="validate" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+<label for="email">Email*</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<i class="material-icons prefix">create</i>
+<textarea id="textarea1" (input)="abt=$event.target.value" class="materialize-textarea"></textarea>
+<label for="textarea1">About Yourself</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+<i class="material-icons prefix">face</i>
+<input id="uname" (input)="uname=$event.target.value" type="text" class="validate" required >
+<label for="uname">Select UserName*</label>
+</div>
+<div class="input-field col s6">
+<i class="material-icons prefix">looks_one</i>
+<input id="pass1" (input)="pwd=$event.target.value" type="text" class="validate" required pattern="^[a-zA-Z]\w{3,14}$">
+<label for="pass1">Select Password*</label>
+</div>
+<div class="input-field col s6">
+<i class="material-icons prefix">looks_two</i>
+<input id="pass2" type="text" class="validate" required >
+<label for="pass2">Re-enter password*</label>
+</div>
+</div>
+
+
+<div class="row">
+    <div class="input-field col s6">
+ <button class="btn waves-effect waves-light" type="submit" name="action"  (click)="newUser()" [disabled]="!userForm.form.valid">Submit
+<i class="material-icons right">send</i>
+</button>
+  </div>
+    
+  </div>
+
+</form>
+
+    <div class="col s2">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    
+
+<div [hidden]="!submitted">
+You have submitted the form.
+
+</div>
+</div>
+</div>
+</div>
